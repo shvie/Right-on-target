@@ -1,0 +1,153 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="20037" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="d3H-28-Eta">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="20020"/>
+        <capability name="Image references" minToolsVersion="12.0"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Игра-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="Right_on_Target" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="25" minValue="1" maxValue="50" translatesAutoresizingMaskIntoConstraints="NO" id="UHM-ec-Wv1">
+                                <rect key="frame" x="18" y="433" width="378" height="31"/>
+                                <color key="tintColor" red="0.99942404029999998" green="0.98555368190000003" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <imageReference key="minimumValueImage" image="0.square.fill" catalog="system" symbolScale="large"/>
+                                <imageReference key="maximumValueImage" image="50.square.fill" catalog="system" symbolScale="large"/>
+                                <color key="thumbTintColor" red="0.0" green="0.56284224989999998" blue="0.31881666180000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            </slider>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="yFh-iX-xqy">
+                                <rect key="frame" x="141" y="513" width="132" height="38"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="Проверить">
+                                    <backgroundConfiguration key="background" cornerRadius="32">
+                                        <color key="backgroundColor" red="0.0" green="0.56284224989999998" blue="0.31881666180000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    </backgroundConfiguration>
+                                    <fontDescription key="titleFontDescription" type="boldSystem" pointSize="20"/>
+                                    <color key="baseForegroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </buttonConfiguration>
+                                <connections>
+                                    <action selector="checkNumber:" destination="BYZ-38-t0r" eventType="touchUpInside" id="CtR-6B-cow"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="66X-gM-7fh">
+                                <rect key="frame" x="197.5" y="177" width="19" height="36"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="30"/>
+                                <color key="textColor" red="0.0" green="0.56031829119999998" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rCO-rl-ogf">
+                                <rect key="frame" x="312" y="831" width="82" height="31"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="Правила">
+                                    <backgroundConfiguration key="background">
+                                        <color key="backgroundColor" red="0.57045853140000002" green="0.57047235969999999" blue="0.57046490910000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    </backgroundConfiguration>
+                                </buttonConfiguration>
+                                <connections>
+                                    <segue destination="wcU-To-odT" kind="show" id="oIe-I4-q3E"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <color key="backgroundColor" red="0.26051741839999998" green="0.2605243921" blue="0.260520637" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="UHM-ec-Wv1" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="BP5-KI-BqH"/>
+                            <constraint firstItem="rCO-rl-ogf" firstAttribute="bottom" secondItem="6Tk-OE-BBY" secondAttribute="bottom" id="DNm-qk-5x1"/>
+                            <constraint firstItem="UHM-ec-Wv1" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="KE6-eO-Csb"/>
+                            <constraint firstItem="66X-gM-7fh" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="TlC-zD-ZnA"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="UHM-ec-Wv1" secondAttribute="trailing" constant="20" id="W1K-tK-CAW"/>
+                            <constraint firstItem="yFh-iX-xqy" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="i5X-oX-3Iw"/>
+                            <constraint firstItem="66X-gM-7fh" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="89" id="m1h-tW-rdq"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" relation="greaterThanOrEqual" secondItem="yFh-iX-xqy" secondAttribute="bottom" constant="50" id="sbN-s4-4CT"/>
+                            <constraint firstItem="yFh-iX-xqy" firstAttribute="top" secondItem="UHM-ec-Wv1" secondAttribute="bottom" constant="50" id="xHz-PC-3Ek"/>
+                            <constraint firstAttribute="trailing" secondItem="rCO-rl-ogf" secondAttribute="trailing" constant="20" id="zv5-J5-1gV"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" title="Игра" id="njJ-cq-rmV"/>
+                    <connections>
+                        <outlet property="UILabel" destination="66X-gM-7fh" id="J0m-K9-j9V"/>
+                        <outlet property="UISlider" destination="UHM-ec-Wv1" id="qWQ-kF-cAF"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="718.84057971014499" y="63.616071428571423"/>
+        </scene>
+        <!--Правила-->
+        <scene sceneID="D2v-gP-cng">
+            <objects>
+                <viewController storyboardIdentifier="SecondViewController" id="wcU-To-odT" customClass="SecondViewController" customModule="Right_on_Target" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="DlV-00-Raz">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Вам нужно примерно указать число на слайдере которое вам указывает значение на лейбле." lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="BFF-rN-8M8">
+                                <rect key="frame" x="20" y="88" width="346" height="61"/>
+                                <fontDescription key="fontDescription" name=".AppleSystemUIFont" family=".AppleSystemUIFont" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="В игре 5 раундов, за каждое угаданное значение вам будут начислены очки (50 очков)" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8Wf-cK-8Lf">
+                                <rect key="frame" x="20" y="150" width="320" height="61"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="ckU-OW-kvH"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="ckU-OW-kvH" firstAttribute="trailing" secondItem="BFF-rN-8M8" secondAttribute="trailing" constant="48" id="60k-mf-6IL"/>
+                            <constraint firstItem="8Wf-cK-8Lf" firstAttribute="top" secondItem="BFF-rN-8M8" secondAttribute="bottom" constant="1" id="Tav-XL-hEu"/>
+                            <constraint firstItem="BFF-rN-8M8" firstAttribute="top" secondItem="ckU-OW-kvH" secondAttribute="top" id="WIR-gu-P4f"/>
+                            <constraint firstItem="BFF-rN-8M8" firstAttribute="leading" secondItem="ckU-OW-kvH" secondAttribute="leading" constant="20" id="ZZm-f1-b5z"/>
+                            <constraint firstItem="ckU-OW-kvH" firstAttribute="trailing" secondItem="8Wf-cK-8Lf" secondAttribute="trailing" constant="74" id="svY-PB-2CB"/>
+                            <constraint firstItem="8Wf-cK-8Lf" firstAttribute="leading" secondItem="BFF-rN-8M8" secondAttribute="leading" id="y8O-RE-NjV"/>
+                            <constraint firstItem="8Wf-cK-8Lf" firstAttribute="leading" secondItem="ckU-OW-kvH" secondAttribute="leading" constant="20" id="zth-Ga-95z"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" title="Правила" id="OGw-yb-FVK"/>
+                    <connections>
+                        <outlet property="textPravil" destination="BFF-rN-8M8" id="qWN-wx-wP1"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="lca-f0-ZRu" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1505.7971014492755" y="63.616071428571423"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="nSa-VU-hqy">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="d3H-28-Eta" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="erf-zO-gtn">
+                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="pEF-3R-jG0"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Nhd-EQ-XF4" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-23.4375" y="63.768115942028992"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="0.square.fill" catalog="system" width="128" height="114"/>
+        <image name="50.square.fill" catalog="system" width="128" height="114"/>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>
